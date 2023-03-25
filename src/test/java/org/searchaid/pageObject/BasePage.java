@@ -3,6 +3,7 @@ package org.searchaid.pageObject;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -53,6 +54,10 @@ public class BasePage {
     public void sendKeys(WebElement e, String txt, String msg) {
         log.info(msg);
         e.sendKeys(txt);
+    }
+
+    public void sendEnter(WebElement e) {
+        e.sendKeys(Keys.ENTER);
     }
 
     public String getAttribute(WebElement e, String attribute) {
